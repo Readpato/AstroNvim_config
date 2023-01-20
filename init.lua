@@ -211,6 +211,8 @@ local config = {
       ["<leader>lF"] = { "<cmd>Eslint<cr>", desc = "Format with Eslint" },
       -- mappings seen under group name Trouble
       ["<leader>Tt"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle trouble list" },
+      ["<C-d>"] = {"<C-d>zz", desc="Jump half page up and center"},
+      ["<C-u>"] = {"<C-u>zz", desc="Jump half page down and center"},
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
