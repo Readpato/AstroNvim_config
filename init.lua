@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "catppuccin-macchiato",
+  colorscheme = "catppuccin",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -211,8 +211,8 @@ local config = {
       ["<leader>lF"] = { "<cmd>Eslint<cr>", desc = "Format with Eslint" },
       -- mappings seen under group name Trouble
       ["<leader>Tt"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle trouble list" },
-      ["<C-d>"] = {"<C-d>zz", desc="Jump half page up and center"},
-      ["<C-u>"] = {"<C-u>zz", desc="Jump half page down and center"},
+      ["<C-d>"] = { "<C-d>zz", desc = "Jump half page up and center" },
+      ["<C-u>"] = { "<C-u>zz", desc = "Jump half page down and center" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
@@ -258,24 +258,14 @@ local config = {
       return config
     end,
     init =
-    { ["rebelot/heirline.nvim"] = { commit = "556666a" },
-      -- Color theme utilized
-      {
-        "catppuccin/nvim",
-        as = "catppuccin",
-        config = function()
-          require("catppuccin").setup {}
-        end,
-      },
+    {
+      ["rebelot/heirline.nvim"] = { commit = "556666a" },
+      {"catppuccin/nvim"},
       {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
         config = function()
-          require("trouble").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-          }
+          require("trouble").setup {}
         end
       }
       -- You can disable default plugins as follows:
