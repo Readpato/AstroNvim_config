@@ -209,10 +209,20 @@ local config = {
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- mappings seen under group name LSP
       ["<leader>lF"] = { "<cmd>Eslint<cr>", desc = "Format with Eslint" },
-      -- mappings seen under group name Trouble
+      -- Trouble 
       ["<leader>Tt"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle trouble list" },
+      -- Moving 
       ["<C-d>"] = { "<C-d>zz", desc = "Jump half page up and center" },
       ["<C-u>"] = { "<C-u>zz", desc = "Jump half page down and center" },
+      ["<leader>k"] = { "<cmd>m .-2<CR>==<cr>k", desc = "Move 1 line up" },
+      ["<leader>j"] = { "<cmd>m .+1<CR>==<cr>k", desc = "Move 1 line down" },
+      -- Resizing 
+      ["<left>"] = { "<C-w>5>", desc = "Resize left" },
+      ["<right>"] = { "<C-w>5<", desc = "Resize right" },
+      ["<down>"] = { "<C-w>5+", desc = "Resize down" },
+      ["<up>"] = { "<C-w>5-", desc = "Resize up" },
+      -- Files
+      ["<leader>R"] = { "<cmd>e!<cr>", desc = "Reload" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
