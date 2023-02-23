@@ -219,8 +219,8 @@ local config = {
       -- Resizing 
       ["<left>"] = { "<C-w>5>", desc = "Resize left" },
       ["<right>"] = { "<C-w>5<", desc = "Resize right" },
-      ["<down>"] = { "<C-w>5+", desc = "Resize down" },
-      ["<up>"] = { "<C-w>5-", desc = "Resize up" },
+      ["<down>"] = { "<C-w>5-", desc = "Resize down" },
+      ["<up>"] = { "<C-w>5+", desc = "Resize up" },
       -- Files
       ["<leader>R"] = { "<cmd>e!<cr>", desc = "Reload" },
       -- quick save
