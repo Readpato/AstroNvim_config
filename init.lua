@@ -25,7 +25,7 @@ local config = {
     -- },
   },
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
   -- Add highlight groups in any theme
   highlights = {
     -- init = { -- this table overrides highlights in all themes
@@ -40,20 +40,20 @@ local config = {
     opt = {
       -- set to true or false etc.
       relativenumber = true, -- sets vim.opt.relativenumber
-      number = true, -- sets vim.opt.number
-      spell = false, -- sets vim.opt.spell
-      signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-      wrap = false, -- sets vim.opt.wrap
+      number = true,         -- sets vim.opt.number
+      spell = false,         -- sets vim.opt.spell
+      signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
+      wrap = false,          -- sets vim.opt.wrap
     },
     g = {
-      mapleader = " ", -- sets vim.g.mapleader
-      autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-      cmp_enabled = true, -- enable completion at start
-      autopairs_enabled = true, -- enable autopairs at start
-      diagnostics_enabled = true, -- enable diagnostics at start
+      mapleader = " ",                   -- sets vim.g.mapleader
+      autoformat_enabled = true,         -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
+      cmp_enabled = true,                -- enable completion at start
+      autopairs_enabled = true,          -- enable autopairs at start
+      diagnostics_enabled = true,        -- enable diagnostics at start
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
-      icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available)
-      ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+      icons_enabled = true,              -- disable icons in the UI (disable if no nerd font is available)
+      ui_notifications_enabled = true,   -- disable notifications when toggling UI elements
     },
   },
   -- If you need more control, you can use the function()...end notation
@@ -80,7 +80,7 @@ local config = {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = true,     -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -143,13 +143,29 @@ local config = {
     n = {
       -- second key is the lefthand side of the map
       -- mappings seen under group name "Buffer"
-      ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-      ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
-      ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
-      ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+          ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+          ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
+          ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
+          ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- tables with the `name` key will be registered with which-key if it's installed
       -- this is useful for naming menus
-      ["<leader>b"] = { name = "Buffers" },
+          ["<leader>b"] = { name = "Buffers" },
+      -- Inside of LSP category
+          ["<leader>lF"] = { "<cmd>Eslint<cr>", desc = "Format with Eslint" },
+      -- Trouble
+          ["<leader>Tt"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle trouble list" },
+      -- Moving
+          ["<C-d>"] = { "<C-d>zz", desc = "Jump half page up and center" },
+          ["<C-u>"] = { "<C-u>zz", desc = "Jump half page down and center" },
+          ["<leader>k"] = { "<cmd>m .-2<CR>==<cr>k", desc = "Move 1 line up" },
+          ["<leader>j"] = { "<cmd>m .+1<CR>==<cr>k", desc = "Move 1 line down" },
+      -- Resizing
+          ["<left>"] = { "<C-w>5>", desc = "Resize left" },
+          ["<right>"] = { "<C-w>5<", desc = "Resize right" },
+          ["<down>"] = { "<C-w>5-", desc = "Resize down" },
+          ["<up>"] = { "<C-w>5+", desc = "Resize up" },
+      -- Files
+          ["<leader>R"] = { "<cmd>e!<cr>", desc = "Reload" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
@@ -170,6 +186,8 @@ local config = {
   },
   -- Configure plugins
   plugins = {
+    "AstroNvim/astrocommunity",
+    { import = "astrocommunity.colorscheme.catppuccin" },
     -- You can disable default plugins as follows:
     -- { "max397574/better-escape.nvim", enabled = false },
     --
