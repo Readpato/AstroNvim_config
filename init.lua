@@ -188,6 +188,8 @@ local config = {
   plugins = {
     "AstroNvim/astrocommunity",
     { import = "astrocommunity.colorscheme.catppuccin" },
+    { import = "astrocommunity.diagnostics.trouble-nvim" },
+    { import = "astrocommunity.markdown-and-latex.glow-nvim" },
     -- You can disable default plugins as follows:
     -- { "max397574/better-escape.nvim", enabled = false },
     --
