@@ -15,11 +15,10 @@ return {
     },
   },
   -- Languages
-  { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.svelte" },
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.html-css" },
   -- Motions
   { import = "astrocommunity.motion.flit-nvim" },
 }
