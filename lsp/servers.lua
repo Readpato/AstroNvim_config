@@ -3,4 +3,6 @@ return {
   "graphql",
   "volar",
   "stylelint_lsp",
+  "html",
+  "cssls",
 }
