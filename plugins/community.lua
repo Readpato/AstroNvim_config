@@ -9,4 +9,6 @@ return {
   { import = "astrocommunity.pack.rust" },
   -- Motions
   { import = "astrocommunity.motion.flit-nvim" },
+  -- Completion
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
