@@ -1,1 +1,5 @@
-return { channel = "stable" }
+return {
+  remote = "origin",
+  channel = "stable",
+  version = "latest",
+}
