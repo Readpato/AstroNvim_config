@@ -6,6 +6,19 @@ return {
       end,
     })
   end,
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "json",
+    "html",
+    "css",
+    "scss",
+    "yaml",
+    "markdown",
+  },
   settings = {
     -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
     workingDirectory = { mode = "auto" },
