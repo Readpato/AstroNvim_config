@@ -2,6 +2,25 @@ return {
   "AstroNvim/astrocommunity",
   -- Colorschemes
   { import = "astrocommunity.colorscheme.catppuccin" },
+  {
+    "catppuccin",
+    opts = {
+      styles = {
+        comments = { "italic" },
+        functions = { "italic" },
+        keywords = { "italic" },
+        variables = { "italic" },
+        -- strings = { "italic" },
+      },
+      -- color_overrides = {
+      --   mocha = {
+      --     base = "#000000",
+      --     mantle = "#000000",
+      --     crust = "#000000",
+      --   },
+      -- },
+    },
+  },
   -- Languages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.vue" },
