@@ -12,15 +12,30 @@ return {
         variables = { "italic" },
         -- strings = { "italic" },
       },
-      -- color_overrides = {
-      --   mocha = {
-      --     base = "#000000",
-      --     mantle = "#000000",
-      --     crust = "#000000",
-      --   },
-      -- },
+      color_overrides = {
+        mocha = {
+          base = "#1a1a1a",
+          mantle = "#1a1a1a",
+          crust = "#1a1a1a",
+        },
+      },
     },
   },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      styles = {
+        comments = { italic = true },
+        functions = { italic = true },
+        keywords = { italic = true },
+        variables = { italic = true },
+        -- strings = { "italic" },
+      },
+    },
+  },
+
   -- Languages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.vue" },
