@@ -69,6 +69,9 @@ return {
           "markdown",
         },
       },
+      volar = {
+        filetypes = { "vue", "typescript", "javascript" },
+      },
     },
     -- customize how language servers are attached
     handlers = {
