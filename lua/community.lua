@@ -1,10 +1,5 @@
--- AstroCommunity: import any community modules here
--- We import this file in `lazy_setup.lua` before the `plugins/` folder.
--- This guarantees that the specs are processed before any user plugins.
-
 ---@type LazySpec
 return {
-  -- import/override with your plugins folder
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.vue" },
@@ -72,29 +67,6 @@ return {
       },
       transparent_background = false,
       show_end_of_buffer = false,
-      -- integration_default = false,
-      -- integrations = {
-      --   barbecue = { dim_dirname = true, bold_basename = true, dim_context = false, alt_background = false },
-      --   cmp = true,
-      --   gitsigns = true,
-      --   hop = true,
-      --   illuminate = { enabled = true },
-      --   native_lsp = { enabled = true, inlay_hints = { background = true } },
-      --   neogit = true,
-      --   neotree = true,
-      --   semantic_tokens = true,
-      --   treesitter = true,
-      --   treesitter_context = true,
-      --   vimwiki = true,
-      --   which_key = true,
-      -- },
-
-      -- styles = {
-      --   comments = { "italic" },
-      --   functions = { "italic" },
-      --   keywords = { "italic" },
-      --   variables = { "italic" },
-      -- },
     },
     highlight_overrides = {
       all = function(colors)
@@ -364,9 +336,7 @@ return {
       end,
     },
   },
-  -- Motions
   { import = "astrocommunity.motion.flit-nvim" },
-  -- Completion
   { import = "astrocommunity.completion.copilot-lua" },
   {
     "copilot.lua",
@@ -379,7 +349,6 @@ return {
           next = "<C-.>",
           prev = "<C-,>",
           dismiss = "<C/>",
-          --dismiss = false,
         },
       },
     },
