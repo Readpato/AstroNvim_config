@@ -47,6 +47,20 @@ return {
       volar = {
         filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
       },
+      cssls = {
+        settings = {
+          scss = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
+      },
     },
     handlers = {},
     autocmds = {
