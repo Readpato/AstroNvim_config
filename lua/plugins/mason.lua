@@ -13,7 +13,6 @@ return {
         "rust-analyzer",
         "vue-language-server",
         "json-lsp",
-        "emmet-ls",
 
         -- install formatters
         "stylua",
