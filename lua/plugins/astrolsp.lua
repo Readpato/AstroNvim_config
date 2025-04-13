@@ -24,6 +24,8 @@ return {
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
+          "go",
+          "yaml",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -34,6 +36,11 @@ return {
       timeout_ms = 1000, -- default format timeout
       filter = function(client) -- fully override the default formatting function
         if vim.bo.filetype == "vue" then return client.name == "eslint" end
+
+        if vim.bo.filetype == "json" then return client.name == "eslint" end
+
+        if vim.bo.filetype == "typescript" then return client.name == "eslint" end
+
         return true
       end,
     },

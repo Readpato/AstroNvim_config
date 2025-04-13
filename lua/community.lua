@@ -8,8 +8,8 @@ return {
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.completion.blink-cmp" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.motion.flit-nvim" },
+  { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.motion.harpoon" },
 }
