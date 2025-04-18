@@ -1,0 +1,39 @@
+{
+  "SFC": {
+    "prefix": ["SFC"],
+    "body": [
+      "",
+      "<script lang=\"ts\" setup>",
+      "\t$2",
+      "</script>",
+      "",
+      "<template>",
+      "\t$1",
+      "</template>",
+      "",
+      "<style scoped lang=\"css\">",
+      "\t$3",
+      "</style>",
+      ""
+    ],
+    "description": "Vue 3 - SFC + TS"
+  },
+"dprops": {
+    "prefix": ["dprops"],
+    "body": [
+    "defineProps<{",
+    "\t$1: \t$2",
+    "}>()"
+    ],
+    "description": "`defineProps` macro snippet"
+  },
+"demits": {
+    "prefix": ["demits"],
+    "body": [
+    "defineEmits<{",
+    "\t$1: [\t$2]",
+    "}>()"
+    ],
+    "description": "`defineEmits` macro snippet"
+  }
+}

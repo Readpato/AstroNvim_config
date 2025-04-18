@@ -12,6 +12,7 @@ return {
         "lua-language-server",
         "rust-analyzer",
         "vue-language-server",
+        "vtsls",
         "json-lsp",
 
         -- install formatters
